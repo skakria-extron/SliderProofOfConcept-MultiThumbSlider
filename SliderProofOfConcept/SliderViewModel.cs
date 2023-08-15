@@ -12,8 +12,8 @@ namespace SliderProofOfConcept
 
         public Slide LowerBoundSlider;
         public Slide UpperBoundSlider;
-        private int _minimum;
-        private int _maximum;
+        private double _minimum;
+        private double _maximum;
         private string _upperTooltipValue;
         private string _lowerTooltipValue;
         private string _lowerSliderName;
@@ -25,12 +25,12 @@ namespace SliderProofOfConcept
 
         public SliderViewModel()
         {
-            LowerBoundSlider = new Slide(0);
-            UpperBoundSlider = new Slide(10);
+            LowerBoundSlider = new Slide(0.0);
+            UpperBoundSlider = new Slide(10.0);
             _lowerTooltipValue = "°C";
             _upperTooltipValue = "°C";
-            Minimum = -50;
-            Maximum = 105;
+            Minimum = -50.0;
+            Maximum = 105.0;
             LowerSliderName = "Limit Temperature";
             UpperSliderName = "Over Temperature";
         }
@@ -81,7 +81,7 @@ namespace SliderProofOfConcept
             }
         }
 
-        public int Minimum
+        public double Minimum
         {
             get
             {
@@ -94,7 +94,7 @@ namespace SliderProofOfConcept
             }
         }
 
-        public int Maximum
+        public double Maximum
         {
             get
             {
@@ -204,6 +204,22 @@ namespace SliderProofOfConcept
             {
                 _upperSliderName = value;
                 RaisePropertyChanged(nameof(UpperSliderName));
+            }
+        }
+
+        public decimal MinimumPollingInterval
+        {
+            get
+            {
+                return 1M;
+            }
+        }
+
+        public decimal MaximumPollingInterval
+        {
+            get
+            {
+                return 1M;
             }
         }
 
