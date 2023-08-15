@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderProofOfConcept", "SliderProofOfConcept\SliderProofOfConcept.csproj", "{564FEE0E-D18F-4706-ABCB-313B4EE8904E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564FEE0E-D18F-4706-ABCB-313B4EE8904E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564FEE0E-D18F-4706-ABCB-313B4EE8904E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564FEE0E-D18F-4706-ABCB-313B4EE8904E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564FEE0E-D18F-4706-ABCB-313B4EE8904E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1080AC51-8007-41FC-B99E-A2F3B00F196D}
+	EndGlobalSection
+EndGlobal
