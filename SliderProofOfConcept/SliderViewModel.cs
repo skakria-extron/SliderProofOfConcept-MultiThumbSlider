@@ -24,6 +24,9 @@ namespace SliderProofOfConcept
 
         #region Constructors
 
+        /// <summary>
+        /// Default Constructor with fixed values
+        /// </summary>
         public SliderViewModel()
         {
             LowerBoundSlider = new Slide(0.0);
@@ -37,11 +40,22 @@ namespace SliderProofOfConcept
             ThumbColor = "gray";
         }
 
+        /// <summary>
+        /// Parameterized constructor that allows you to set the sliders to the exact specifications
+        /// </summary>
+        /// <param name="lowerSliderValue"></param>
+        /// <param name="upperSliderValue"></param>
+        /// <param name="minimum"></param>
+        /// <param name="maximum"></param>
+        /// <param name="Unit"></param>
+        /// <param name="lowerSliderName"></param>
+        /// <param name="upperSliderName"></param>
+        /// <param name="thumbColor"></param>
         public SliderViewModel(double lowerSliderValue,
             double upperSliderValue,
             int minimum,
             int maximum,
-            string temperatureUnit,
+            string Unit,
             string lowerSliderName,
             string upperSliderName,
             string thumbColor)
@@ -50,8 +64,8 @@ namespace SliderProofOfConcept
             UpperBoundSlider = new Slide(upperSliderValue);
             Minimum = minimum;
             Maximum = maximum;
-            _lowerTooltipValue = temperatureUnit;
-            _upperTooltipValue = temperatureUnit;
+            _lowerTooltipValue = Unit;
+            _upperTooltipValue = Unit;
             LowerSliderName = lowerSliderName;
             UpperSliderName = upperSliderName;
             ThumbColor = thumbColor;
@@ -61,6 +75,9 @@ namespace SliderProofOfConcept
 
         #region Properties
 
+        /// <summary>
+        /// Value of the Upper Bound Slider
+        /// </summary>
         public double UpperBoundSliderValue
         {
             get
@@ -76,6 +93,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Value of the Lower Bound Slider
+        /// </summary>
         public double LowerBoundSliderValue
         {
             get
@@ -91,6 +111,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Minimum value allowed on the slider
+        /// </summary>
         public double Minimum
         {
             get
@@ -104,6 +127,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Maximum value allowed on the slider
+        /// </summary>
         public double Maximum
         {
             get
@@ -117,6 +143,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Tooltip value for the Upper Bound Slider
+        /// </summary>
         public string UpperTooltipValue
         {
             get
@@ -132,6 +161,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Tooltip value for the Lower Bound Slider
+        /// </summary>
         public string LowerTooltipValue
         {
             get
@@ -147,6 +179,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Modifiable textbox value for the Upper Bound Slider
+        /// </summary>
         public double UpperBoundSliderUpdateValue
         {
             get
@@ -169,6 +204,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Modifiable textbox value for the Lower Bound Slider
+        /// </summary>
         public double LowerBoundSliderUpdateValue
         {
             get
@@ -191,6 +229,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Name of the Lower Bound Slider
+        /// </summary>
         public string LowerSliderName
         {
             get
@@ -204,6 +245,9 @@ namespace SliderProofOfConcept
             }
         }
 
+        /// <summary>
+        /// Name of the Upper Bound Slider
+        /// </summary>
         public string UpperSliderName
         {
             get
@@ -217,22 +261,9 @@ namespace SliderProofOfConcept
             }
         }
 
-        public decimal MinimumPollingInterval
-        {
-            get
-            {
-                return 1M;
-            }
-        }
-
-        public decimal MaximumPollingInterval
-        {
-            get
-            {
-                return 1M;
-            }
-        }
-
+        /// <summary>
+        /// Allows you to set the color of both thumbs in the multi-thumb slider
+        /// </summary>
         public string ThumbColor
         {
             get
