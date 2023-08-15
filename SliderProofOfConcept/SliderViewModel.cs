@@ -37,7 +37,14 @@ namespace SliderProofOfConcept
             ThumbColor = "gray";
         }
 
-        public SliderViewModel(double lowerSliderValue, double upperSliderValue, int minimum, int maximum, string temperatureUnit, string lowerSliderName, string upperSliderName, string thumbColor)
+        public SliderViewModel(double lowerSliderValue,
+            double upperSliderValue,
+            int minimum,
+            int maximum,
+            string temperatureUnit,
+            string lowerSliderName,
+            string upperSliderName,
+            string thumbColor)
         {
             LowerBoundSlider = new Slide(lowerSliderValue);
             UpperBoundSlider = new Slide(upperSliderValue);
