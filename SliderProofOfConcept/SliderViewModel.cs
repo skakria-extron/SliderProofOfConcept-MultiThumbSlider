@@ -18,6 +18,7 @@ namespace SliderProofOfConcept
         private string _lowerTooltipValue;
         private string _lowerSliderName;
         private string _upperSliderName;
+        private string _thumbColor;
 
         #endregion
 
@@ -33,9 +34,10 @@ namespace SliderProofOfConcept
             Maximum = 105.0;
             LowerSliderName = "Limit Temperature";
             UpperSliderName = "Over Temperature";
+            ThumbColor = "gray";
         }
 
-        public SliderViewModel(double lowerSliderValue, double upperSliderValue, int minimum, int maximum, string temperatureUnit, string lowerSliderName, string upperSliderName)
+        public SliderViewModel(double lowerSliderValue, double upperSliderValue, int minimum, int maximum, string temperatureUnit, string lowerSliderName, string upperSliderName, string thumbColor)
         {
             LowerBoundSlider = new Slide(lowerSliderValue);
             UpperBoundSlider = new Slide(upperSliderValue);
@@ -45,6 +47,7 @@ namespace SliderProofOfConcept
             _upperTooltipValue = temperatureUnit;
             LowerSliderName = lowerSliderName;
             UpperSliderName = upperSliderName;
+            ThumbColor = thumbColor;
         }
 
         #endregion
@@ -220,6 +223,19 @@ namespace SliderProofOfConcept
             get
             {
                 return 1M;
+            }
+        }
+
+        public string ThumbColor
+        {
+            get
+            {
+                return _thumbColor;
+            }
+            set
+            {
+                _thumbColor = value;
+                RaisePropertyChanged(nameof(ThumbColor));
             }
         }
 

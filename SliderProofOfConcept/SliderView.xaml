@@ -21,7 +21,7 @@
                             <Thumb x:Name="Thumb">
                                 <Thumb.Template>
                                     <ControlTemplate TargetType="{x:Type Thumb}">
-                                        <Rectangle Fill="Gray" Height="18" SnapsToDevicePixels="True" Stroke="Black" Width="10"/>
+                                        <Rectangle Fill="{Binding ThumbColor}" Height="18" SnapsToDevicePixels="True" Stroke="Black" Width="10"/>
                                     </ControlTemplate>
                                 </Thumb.Template>
                             </Thumb>
